@@ -1,0 +1,125 @@
+* {
+ padding: 0;
+ margin: 0;
+ box-sizing: border-box;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+.search-ic, .cart-ic {
+  width:25px;
+  height:28px
+}
+header {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 15px;
+  align-items: center;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.0);
+  z-index: 9999;
+}
+header:has(div) {
+  background: linear-gradient(to bottom, rgba(0, 0, 0), rgba(0, 0, 0, 0));
+}
+header:only-child {
+  /* filter: invert(); */
+}
+.web-ic {
+  font-size: 20px;
+}
+nav {
+  display: flex;
+  gap: 10px;
+}
+.list {
+  padding-top: 70px;
+}
+.Fab-ic {
+  width: 60px;
+}
+.bot-right {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.grid .item .item-pic {
+  width: 100%;
+  object-fit: cover;
+}
+.grid .item {
+  margin: 8px;
+  display: flex;
+  flex-direction: column;
+  animation: jump 1s ease-in-out;
+}
+.item.is-visible {
+  animation: jump 1s ease-in-out;
+}
+.rel-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 95vh;
+    overflow: hidden;
+  }
+
+  .rel.video {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
+
+  .wrapper {
+    position: relative;
+    z-index: 1;
+    color: whitesmoke;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 1));
+  }
+  .land-text {
+    font-size: 10vw;
+  }
+  .shop-btn {
+    background-color: #fff;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-weight: 600;
+  }
+.grid:hover > :not(:hover) {
+  opacity: 0.9;
+  transition: opacity 0.5s ease-in-out;
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  
+}
