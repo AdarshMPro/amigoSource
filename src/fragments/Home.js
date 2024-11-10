@@ -4,7 +4,7 @@ import Header from '../components/Header';
 function Home() {
     return(
         <div>
-            <Header mode="light" show="true"/>
+            <Header mode="light" bg="true" show="true"/>
             <div className="list">
             <GridList />
             </div>

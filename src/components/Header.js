@@ -1,10 +1,12 @@
 import { Outlet } from "react-router-dom";
 
 function Header(props) {
+     
     return(
-        <div>
+      <>
+        <div style={ props.bg === 'true' ? {backgroundColor: "White" } : {backgroundColor: "#00000000"} }>
           { props.show ? (
-      <header style={ props.mode === 'dark' ? {filter: "invert(1)"} : {filter: "invert(0)"} }>
+      <header style={ props.mode === 'dark' ? {filter: "invert(1)"} : {filter: "invert(0)", backgroundColor: "white"} }>
         <span className="web-ic">AmigoWears</span>
         <nav>
         <svg className="search-ic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="search">
@@ -29,6 +31,7 @@ function Header(props) {
 
     <Outlet />
     </div>
+    </>
     )
 }
 
